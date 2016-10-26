@@ -1,2 +1,2 @@
-# Random-js-fnctions
+# Random-js-functions
 Random javascript function
