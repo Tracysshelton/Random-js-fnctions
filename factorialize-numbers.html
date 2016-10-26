@@ -1,21 +1,22 @@
 
-<input type="text" id="yourNumber" value="Enter number">
+<input type="text" id="yourNumber" value="Number">
 <button onclick="theNumber()">Factorize it</button>
 <p id="factorized"></p>
 
 <script>
+//retriving the number    
 function theNumber() {
-    var x = document.getElementById("yourNumber").value;
-    document.getElementById("factorized").innerHTML = num;
+    var num = document.getElementById("yourNumber").value;
+	return factorialize(num);
+    
+    //The factorialize a number (3! = 1 X 2 X 3 = 6)
+    function factorialize(num) {
+        var startingFactor = 1;
+        // factorizing the number
+        for (var i = 2; i <= num; i++){
+            startingFactor = startingFactor * i;
+        }
+        //returning the factorized numer
+        document.getElementById("factorized").innerHTML = startingFactor;
+    }
 }
-
-//The factorialize a number (3! = 1 X 2 X 3 = 6)
-
-function factorialize(num) {
-  var startingFactor = 1;
-  for (var i = 2; i <= num; i++){
-    startingFactor = startingFactor * i;
-  }
-  return startingFactor;
-}
-</script>
